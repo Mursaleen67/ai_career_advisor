@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>AI Career Analyzer</title>
+
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>AI Career Analyzer</h1>
+
+<p class="subtitle">
+Enter your skills and get AI-powered career suggestions
+</p>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="input-box">
+
+<label>Your Skills</label>
+
+{{ form.skills }}
+
+</div>
+
+<button class="btn" type="submit">
+
+Analyze Career
+
+</button>
+
+</form>
+
+</div>
+
+</body>
+
+</html>
